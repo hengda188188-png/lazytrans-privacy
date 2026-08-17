@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LazyTrans 隱私權政策</title>
+<style>
+  :root{ --ink:#1a2532; --sub:#5d7186; --line:#dde4ec; --accent:#4a6fa5; --bg:#ffffff; --box:#f5f7fa; }
+  *{box-sizing:border-box}
+  body{margin:0;padding:48px 20px 80px;background:var(--bg);color:var(--ink);
+       font-family:"Microsoft JhengHei",-apple-system,"Segoe UI",system-ui,sans-serif;
+       font-size:16px;line-height:1.8;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px;margin:0 auto}
+  header{border-bottom:2px solid var(--accent);padding-bottom:20px;margin-bottom:8px}
+  h1{font-size:30px;font-weight:800;letter-spacing:-.02em;margin:0 0 6px}
+  .meta{color:var(--sub);font-size:14px;margin:0}
+  h2{font-size:19px;font-weight:700;margin:38px 0 10px;padding-top:22px;border-top:1px solid var(--line)}
+  h2:first-of-type{border-top:0;padding-top:0}
+  p{margin:0 0 14px}
+  ul{margin:0 0 14px;padding-left:22px} li{margin:5px 0}
+  .lead{background:var(--box);border-left:4px solid var(--accent);padding:16px 20px;
+        border-radius:0 8px 8px 0;margin:0 0 8px}
+  .lead strong{color:var(--accent)}
+  code{background:var(--box);border:1px solid var(--line);border-radius:4px;
+       padding:1px 6px;font-size:.9em;font-family:ui-monospace,Consolas,monospace}
+  table{width:100%;border-collapse:collapse;margin:0 0 14px;font-size:15px}
+  th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:var(--box);font-weight:700;font-size:14px}
+  .no{color:#b0392e;font-weight:700}
+  .yes{color:#1f7a4d;font-weight:700}
+  footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);
+         color:var(--sub);font-size:14px}
+  a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>LazyTrans 隱私權政策</h1>
+  <p class="meta">最後更新：2026 年 8 月 18 日</p>
+</header>
+
+<p class="lead">
+  <strong>LazyTrans 沒有自己的伺服器。</strong>
+  開發者無法看到、也不會收到你的任何資料。本擴充功能不含任何分析、追蹤或回報程式碼。
+</p>
+
+<h2>一、翻譯時會傳送什麼、傳送給誰</h2>
+
+<p>在下列三種情況下，頁面上需要翻譯的<strong>文字內容</strong>會傳送至
+<strong>你自己選擇並自備金鑰</strong>的 AI 服務商：</p>
+
+<ul>
+  <li>你按下翻譯按鈕</li>
+  <li>你選取文字使用「劃詞翻譯」</li>
+  <li>你造訪已加入「自動翻譯清單」的網站</li>
+</ul>
+
+<p>傳送對象為下列其中一家，取決於你在設定中的選擇：</p>
+
+<ul>
+  <li>Google Gemini — <code>generativelanguage.googleapis.com</code></li>
+  <li>Anthropic Claude — <code>api.anthropic.com</code></li>
+  <li>Groq — <code>api.groq.com</code></li>
+</ul>
+
+<table>
+  <tr><th>項目</th><th>是否傳送</th></tr>
+  <tr><td>待翻譯的文字字串</td><td class="yes">會</td></tr>
+  <tr><td>目標語言名稱</td><td class="yes">會</td></tr>
+  <tr><td>網址（URL）</td><td class="no">不會</td></tr>
+  <tr><td>頁面標題</td><td class="no">不會</td></tr>
+  <tr><td>Cookie</td><td class="no">不會</td></tr>
+  <tr><td>瀏覽紀錄</td><td class="no">不會</td></tr>
+  <tr><td>任何可識別你身分的資訊</td><td class="no">不會</td></tr>
+</table>
+
+<p>這些文字送達服務商之後如何被處理，適用<strong>該服務商自己的隱私權政策</strong>，
+請自行參閱其條款。LazyTrans 無法控制、也不參與該階段的處理。</p>
+
+<h2>二、儲存在你電腦上的資料</h2>
+
+<p>以下資料只存在你瀏覽器的本機儲存空間（<code>chrome.storage.local</code>），不會離開你的裝置：</p>
+
+<ul>
+  <li>你填入的 API Key</li>
+  <li>偏好設定：翻譯引擎、模型、目標語言、顯示模式、快取保留天數</li>
+  <li>自動翻譯的網站清單</li>
+  <li>翻譯快取：已翻譯過的文字與其譯文，用於避免重複呼叫 API 而重複付費</li>
+</ul>
+
+<p>翻譯快取預設保留 30 天，你可以在設定中調整天數或隨時清除。
+移除本擴充功能時，上述資料會由瀏覽器一併刪除。</p>
+
+<h2>三、你的 API Key</h2>
+
+<p>金鑰只存在你的瀏覽器本機，僅用於直接呼叫你所選擇的服務商 API。
+<strong>開發者不會、也無法取得你的金鑰。</strong>
+金鑰不會傳送給開發者或任何第三方，只會隨著翻譯請求送往你指定的那一家服務商。</p>
+
+<h2>四、權限說明</h2>
+
+<table>
+  <tr><th>權限</th><th>用途</th></tr>
+  <tr><td><code>storage</code></td><td>儲存上述設定與快取，全部留在本機</td></tr>
+  <tr><td><code>activeTab</code></td><td>點擊工具列圖示時取得目前網站名稱，供「加入自動翻譯」使用</td></tr>
+  <tr><td><code>&lt;all_urls&gt;</code></td><td>你可能在任何網站需要翻譯，因此無法事先限定網域。在你主動觸發翻譯之前，不會擷取或傳送任何內容</td></tr>
+</table>
+
+<h2>五、不做的事</h2>
+
+<ul>
+  <li>不蒐集個人識別資訊</li>
+  <li>不建立使用者帳號或識別碼</li>
+  <li>不販售或分享資料給任何第三方</li>
+  <li>不含分析、追蹤、遙測或錯誤回報程式碼</li>
+  <li>不從遠端載入任何程式碼</li>
+</ul>
+
+<h2>六、政策變更</h2>
+
+<p>本政策如有修改，會更新本頁最上方的「最後更新」日期。
+若涉及資料處理方式的重大變更，會在擴充功能的更新說明中一併告知。</p>
+
+<h2>七、聯絡方式</h2>
+
+<p>如對本政策有任何疑問，請透過
+<a href="https://github.com/qiyi-studio/LazyTranslation/issues">GitHub Issues</a>
+與我們聯繫。</p>
+
+<footer>
+  LazyTrans — 外文網頁的原文＋譯文對照閱讀
+</footer>
+
+</div>
+</body>
+</html>
